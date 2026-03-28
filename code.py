@@ -1,5 +1,3 @@
-# Assignment Deadline Reminder System with Date + Time + Popup
-
 from datetime import datetime
 from plyer import notification
 import time
@@ -7,9 +5,6 @@ import threading
 
 assignments = []
 
-# -------------------------------
-# Function: Check Deadlines & Notify
-# -------------------------------
 def check_deadlines():
     while True:
         now = datetime.now()
@@ -19,7 +14,6 @@ def check_deadlines():
             time_left = deadline - now
             minutes_left = int(time_left.total_seconds() / 60)
 
-            # Notification conditions
             if minutes_left < 0:
                 message = f"{name} deadline missed!"
             elif minutes_left == 0:
@@ -30,26 +24,18 @@ def check_deadlines():
                 hours = minutes_left // 60
                 message = f"{name} due in {hours} hours"
             else:
-                continue  # Skip non-urgent
-
-            # Popup Notification
+                continue  
             notification.notify(
                 title="Assignment Reminder",
                 message=message,
                 timeout=5
             )
 
-        time.sleep(60)  # Check every 1 minute
+        time.sleep(60)  
 
-# -------------------------------
-# Start Background Thread
-# -------------------------------
 thread = threading.Thread(target=check_deadlines, daemon=True)
 thread.start()
 
-# -------------------------------
-# Main Menu
-# -------------------------------
 while True:
     print("\n1. Add Assignment")
     print("2. Check Deadlines")
