@@ -20,9 +20,9 @@ This project uses a **rule-based AI system**, where decisions are made using con
 
 ## 🛠️ Tech Stack
 - Python  
-- datetime module  
-- plyer (for notifications)  
-- threading  
+- `datetime` module  
+- `plyer` (for notifications)  
+- `threading`  
 
 ---
 
