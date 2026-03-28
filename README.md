@@ -1,20 +1,20 @@
 # 📘 Assignment Deadline Reminder System
 
-A simple Python-based project that helps students track assignment deadlines and receive timely reminders using basic AI logic.
+A simple Python-based project that helps students track assignment deadlines and receive timely reminders using basic AI logic. It calculates remaining time and provides smart notifications based on urgency.
 
 ---
 
 ## 🚀 Features
 - Add and manage assignments with **date & time**
 - Calculates remaining time (minutes/hours/days)
-- Shows **urgency-based alerts**
+- Provides **urgency-based alerts**
 - Displays **popup notifications**
-- Runs in the background for automatic reminders
+- Runs in the background automatically
 
 ---
 
 ## 🧠 AI Concept Used
-This project uses a **rule-based AI system**, where decisions are made using conditions (if-else logic) to classify urgency and trigger reminders.
+This project uses a **rule-based AI system**, where decisions are made using predefined conditions (if-else logic) to classify urgency and trigger reminders.
 
 ---
 
@@ -22,7 +22,7 @@ This project uses a **rule-based AI system**, where decisions are made using con
 - Python  
 - datetime module  
 - plyer (for notifications)  
-- threading 
+- threading  
 
 ---
 
