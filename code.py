@@ -48,7 +48,7 @@ while True:
         deadline = input("Enter deadline (YYYY-MM-DD HH:MM): ")
 
         assignments.append((name, deadline))
-        print("✅ Assignment added!")
+        print(" Assignment added!")
 
     elif choice == '2':
         now = datetime.now()
@@ -61,18 +61,18 @@ while True:
             print(f"\n{name}")
 
             if minutes_left < 0:
-                print("❌ Deadline missed!")
+                print(" Deadline missed!")
             else:
                 hours = minutes_left // 60
                 minutes = minutes_left % 60
                 print(f"⏳ Time left: {hours} hours {minutes} minutes")
 
                 if minutes_left <= 60:
-                    print("🚨 Very Urgent!")
+                    print(" Very Urgent!")
                 elif minutes_left <= 1440:
-                    print("⚠️ Due within a day")
+                    print(" Due within a day")
                 else:
-                    print("✅ You have time")
+                    print(" You have time")
 
     elif choice == '3':
         print("Exiting program...")
